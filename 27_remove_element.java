@@ -24,15 +24,16 @@ Example:
 
 根据上面的这个例子，很自然的我就想到了把 3，4 调换，然后把 3 和 5 调换。但是题目的要求不需要调换所有的元素。
 
-[1,2,3,3,4,5] val = 3 => [1,2,4,3,3]
-如果碰到这种情况，我就要用一个指针指向第一个 3， 然后第二个指针去指向一个不是 3 的元素
+用 i 来 作为 慢指针(代表新返回数组的长度)， 用 j 做成快指针， 如果nums[j] == val , 那么 j++， 直到数组末尾。
+
+如果 nums[j] != val , 就把nums[j] 赋值给 nums[i]; 然后 i++;
 
 class Solution{
     public int removeElement(int[] nums, int val){
         int i = 0;
         for (int j = 0 ; j < nums.length; j++ ) {
             if (nums[j] != val) {
-                nums[i] = nums[j];
+                nums[i] = nums[j]; //
                 i++;
             }
         }
