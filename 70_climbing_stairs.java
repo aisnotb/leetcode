@@ -59,6 +59,22 @@ class Solution{
 
 class Solution{
 	public int climbStairs(int n){
-
+		if (n <= 2) {
+			return n;
+		}
+		int first = 1;
+		int second = 2;
+		int rst = 0;
+		for (int i = 3; i <= n  ; i++) {
+			rst = first + second;
+			first = second;
+			second = rst;
+		}
+		return rst;
 	}
 }
+
+总结： 
+
+	如果碰到可以 找到上述这种明确规律的题 可以直接用 fabbnacci 的方法 来解决。
+	可以达到时间 和 空间都是最优解 。
