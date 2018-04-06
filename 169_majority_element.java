@@ -42,4 +42,8 @@ class Solution{
 }
 
 
+参考资料
+http://www.cs.utexas.edu/~moore/best-ideas/mjrty/index.html
+
+
 
