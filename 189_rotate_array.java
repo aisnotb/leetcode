@@ -24,14 +24,36 @@ Try to come up as many solutions as you can, there are at least 3 different ways
 
 现在理清楚了题目的意思，开始写代码
 
+解法 1 暴力解法 每次把整个数组 移动 1 个位置, 移动 k次
+
+class Solution {
+	public void rotate(int[] nums, int k){
+		int n = nums.length;
+		for (int i = 0 ; i < k; i++) {
+			int temp ;
+			int current = nums[n-1];
+			for (int j = 0; j < n ; j++) {
+				temp = nums[j];
+				nums[j] = nums[n-1];
+				// nums[n-1] = temp;
+			}
+		}
+	}
+}
+
 class Solution {
     public void rotate(int[] nums, int k) {
-        int n = nums.length; // 假设所有的输入都是合法的，或者等下做检测
+        int n = nums.length; 				//假设所有的输入都是合法的，或者等下做检测
         if (k % (n - 1) == 0) {
         	return ;
         }
         for (int i = 0; i < n; i++) {
-        	
+        	//move all the elments move right k steps
+        	if (i + k > n - 1) {
+        		nums[] = nums[i];
+        	}else{
+        		nums[i + k] = nums[i];
+        	}
         }
     }
 }
