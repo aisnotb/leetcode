@@ -37,5 +37,6 @@ public class Solution extends GuessGame {
     
 }
 
-总结。
+总结
 我在判断数字不等于 0 的时候，经常会弄反顺序。。
+我需要反思下 ，然后继续后面的题目
