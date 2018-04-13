@@ -36,6 +36,27 @@ public class Solution extends GuessGame {
     }
     
 }
+这个题目我现在写第二遍
+
+态度一定要好。
+后来我仔细看了别人的评论，这个题目本身就很confusing
+并不是我的理解问题。所以，let it go :)
+
+
+思路3.
+直接来暴力解法, 不过这个解法毫无意义。如果被问到的话一句话带过吧
+
+public class Solution extends GuessGame{
+	public int guessNumber( int n ) {
+		//直接暴力循环
+		for(int i = 1 ; i <=n; i++) {
+			if( guess(i) == 0 ) {
+				return i;
+			}
+		}
+		return -1;
+	}
+}
 
 总结
 我在判断数字不等于 0 的时候，经常会弄反顺序。。
